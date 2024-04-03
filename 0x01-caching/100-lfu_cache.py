@@ -31,7 +31,8 @@ class LFUCache(BaseCaching):
                 trackpad = self.__trackpad.copy()
                 trackpad.pop(key)
                 least_f_used = min(
-                    trackpad, key=lambda k: (trackpad[k], self.__queue.index(k))
+                    trackpad, key=lambda k: (trackpad[k], self.__queue.index(k)
+                                             )
                 )
                 # min_freq = min(trackpad.values())
                 # mf_keys = [k for k, f in trackpad.items() if f == min_freq]
