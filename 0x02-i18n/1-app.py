@@ -16,6 +16,7 @@ app = Flask(__name__, template_folder="templates")
 app.config.from_object(Config)
 babel = Babel(app)
 
+
 @app.route("/", strict_slashes=False)
 def hello_world():
     """ Hello world """
